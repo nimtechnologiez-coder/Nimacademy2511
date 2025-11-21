@@ -82,7 +82,7 @@ const CourseCards = () => {
   ];
 
   return (
-    <div className="cc-wrapper">
+    <div className="cc-wrapperr">
 
       {/* ================= TOP HEADING SECTION ================= */}
       <div className="top-section">

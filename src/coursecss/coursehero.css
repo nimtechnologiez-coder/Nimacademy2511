@@ -114,7 +114,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background: linear-gradient(90deg, #2fa2d8, #9bff6a);
+  background: lineargradient(90deg, #2fa2d8, #9bff6a);
   padding: 18px 45px;
   font-size: 26px;
   font-weight: 800;

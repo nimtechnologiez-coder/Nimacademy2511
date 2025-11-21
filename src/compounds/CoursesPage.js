@@ -1,3 +1,4 @@
+/* === COURSES PAGE === */
 import React, { useEffect } from "react";
 import "../Style/CoursesPage.css";
 
@@ -15,23 +16,22 @@ import dataAnalystImg from "../Images/dataAnalystImg.png";
 import devopsImg from "../Images/aws.png";
 
 const CoursesPage = () => {
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("cpg-show");
-            entry.target.style.animationDelay = `${index * 0.15}s`;
+            entry.target.style.animationDelay = `${index * 0.12}s`;
           }
         });
       },
-      { threshold: 0.25 }
+      { threshold: 0.28 }
     );
 
-    document.querySelectorAll(".cpg-fade-up, .cpg-fade-right").forEach((el) => {
-      observer.observe(el);
-    });
+    document
+      .querySelectorAll(".cpg-fade-up, .cpg-fade-right")
+      .forEach((el) => observer.observe(el));
   }, []);
 
   const techCourses = [
@@ -48,7 +48,7 @@ const CoursesPage = () => {
   return (
     <div className="cpg-wrapper">
 
-      {/* SECTION ONE */}
+      {/* ========================= SECTION ONE ========================= */}
       <section className="cpg-section-one">
 
         <h2 className="cpg-main-heading cpg-fade-up">
@@ -60,26 +60,28 @@ const CoursesPage = () => {
           At <span className="cpg-green cpg-bold">NIM Academy</span>, we don’t just teach —
           we transform learners into professionals.
           <br />
-          Our programs are curated by industry experts and aligned with the latest
-          technology trends.
+          Our programs are curated by industry experts and aligned with the
+          latest technology trends.
         </p>
 
-        {/* AUTO SLIDER */}
-        <div className="cpg-slider-container cpg-fade-up">
-          <div className="cpg-slider-track">
+        {/* ================= UNIQUE AUTO SLIDER ================= */}
+        <div className="cpg-uni-slider-container cpg-fade-up">
+          <div className="cpg-uni-slider-track">
 
-            <div className="cpg-card-group">
+            {/* LOOP 1 */}
+            <div className="cpg-uni-card-group">
               {techCourses.map((item, i) => (
-                <div key={i} className="cpg-course-card cpg-fade-up">
+                <div key={i} className="cpg-course-card">
                   <img src={item.icon} className="cpg-card-icon" alt={item.title} />
                   <div className="cpg-card-title">{item.title}</div>
                 </div>
               ))}
             </div>
 
-            <div className="cpg-card-group">
+            {/* LOOP 2 (DUPLICATE FOR INFINITE SCROLL) */}
+            <div className="cpg-uni-card-group">
               {techCourses.map((item, i) => (
-                <div key={i} className="cpg-course-card cpg-fade-up">
+                <div key={i + "b"} className="cpg-course-card">
                   <img src={item.icon} className="cpg-card-icon" alt={item.title} />
                   <div className="cpg-card-title">{item.title}</div>
                 </div>
@@ -95,7 +97,7 @@ const CoursesPage = () => {
         </h2>
       </section>
 
-      {/* SECTION TWO */}
+      {/* ========================= SECTION TWO ========================= */}
       <section className="cpg-section-two">
 
         <h2 className="cpg-section2-heading cpg-fade-up">
@@ -108,6 +110,7 @@ const CoursesPage = () => {
 
         <div className="cpg-hanging-cards">
 
+          {/* Card 1 */}
           <div className="cpg-hang-item cpg-fade-right">
             <div className="cpg-hanger"></div>
             <div className="cpg-clip"></div>
@@ -118,16 +121,18 @@ const CoursesPage = () => {
             </div>
           </div>
 
+          {/* Card 2 */}
           <div className="cpg-hang-item cpg-fade-right">
             <div className="cpg-hanger"></div>
             <div className="cpg-clip"></div>
-            <div className="cpg-hang-card cpg-highlight-card">
+            <div className="cpg-hang-card">
               <img src={dataAnalystImg} alt="Data Analyst" />
               <h4>Data Analyst</h4>
               <p>Turn Data Into Decisions</p>
             </div>
           </div>
 
+          {/* Card 3 */}
           <div className="cpg-hang-item cpg-fade-right">
             <div className="cpg-hanger"></div>
             <div className="cpg-clip"></div>
@@ -141,7 +146,7 @@ const CoursesPage = () => {
         </div>
       </section>
 
-      {/* VIEW ALL BUTTON */}
+      {/* ========================= BUTTON ========================= */}
       <div className="cpg-view-btn-wrapper">
         <a href="/courses" className="cpg-view-btn cpg-fade-up">
           View All Courses

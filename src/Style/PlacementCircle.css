@@ -1,0 +1,252 @@
+/* ============================================
+   GLOBAL FONT
+============================================ */
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* ============================================
+   PLACEMENT CIRCLE SECTION
+============================================ */
+.place-main-wrapper {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADINGS */
+.place-title {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #003a5c;
+}
+
+.place-title span {
+  color: #0E7A8B;
+}
+
+.place-subheading {
+  font-size: clamp(16px, 2.5vw, 24px);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+.place-description {
+  max-width: 900px;
+  font-size: clamp(14px, 2.2vw, 18px);
+  line-height: 1.7;
+  margin: 0 auto 40px;
+  color: #333;
+}
+
+/* ============================================
+   PERFECT CIRCLE RESPONSIVE (NEVER OVAL)
+============================================ */
+.place-circle {
+  width: clamp(250px, 80vw, 740px);
+  height: clamp(250px, 80vw, 740px);
+  margin: 40px auto;
+  background: linear-gradient(180deg, #005A9B, #35A988, #C8FF60);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FADED BG IMAGE */
+.place-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+}
+
+/* CONTENT INSIDE CIRCLE */
+.place-content {
+  position: relative;
+  z-index: 5;
+  width: clamp(240px, 60vw, 460px);
+}
+
+/* EACH ROW INSIDE CIRCLE */
+.place-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: clamp(16px, 4vw, 45px);
+}
+
+.place-row:last-child {
+  margin-bottom: 0;
+}
+
+/* BLACK LINE */
+.place-line {
+  height: 3px;
+  width: clamp(18px, 8vw, 45px);
+  background: #000;
+  margin-right: clamp(8px, 3vw, 22px);
+}
+
+/* ICON */
+.place-icon {
+  width: clamp(36px, 10vw, 62px);
+  margin-right: clamp(10px, 3vw, 20px);
+  background: white;
+  padding: clamp(4px, 1vw, 8px);
+  border-radius: 14px;
+  border: 3px dashed black;
+}
+
+/* TEXT */
+.place-text {
+  margin: 0;
+  font-size: clamp(13px, 3.2vw, 22px);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* ============================================
+   COLLEGE COLLABORATION SECTION
+============================================ */
+
+.cc-wrapper {
+  max-width: 1100px;
+  margin: 70px auto 50px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.cc-titlee {
+  font-size: clamp(26px, 4vw, 42px);
+  font-weight: 700;
+  color: #003a5c;
+  margin-bottom: 35px;
+}
+
+.cc-titlee span {
+  color: #63b43c;
+}
+.cc-subtitle{
+
+  font-weight: 450;
+  color: #01141f;
+  margin-bottom: px; 
+}
+
+.cc-description {
+  max-width: 900px;
+  margin: 0 auto 50px;
+  font-size: clamp(14px, 2.4vw, 18px);
+  line-height: 1.7;
+  color: #111;
+}
+
+.cc-network-title {
+  font-size: clamp(20px, 3.5vw, 34px);
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+.cc-network-title span {
+  color: #5aa589;
+}
+
+/* ============================================
+   EXTRA SMALL DEVICES 340px → 375px TWEAKS
+============================================ */
+
+/* ============================================
+   DEVICES 375px AND BELOW
+============================================ */
+@media (max-width: 375px) {
+
+  .place-circle {
+    width: 320px;
+    height: 320px; /* perfect circle */
+  }
+
+  .place-content {
+    width: 90%;
+  }
+
+  .place-row {
+    margin-bottom: 22px;
+  }
+
+  .place-icon {
+    width: 46px;
+    padding: 6px;
+    border-width: 2px;
+  }
+  
+
+  .place-line {
+    width: 26px;
+    height: 2px;
+  }
+
+  .place-text {
+    font-size: 15px;
+  }
+
+  
+}
+
+
+
+/* ============================================
+   PERFECT RESPONSIVE CIRCLE FIX (ALL DEVICES)
+============================================ */
+
+/* DEFAULT DESKTOP CONTENT SIZE */
+
+
+
+
+/* EXACT 340px & BELOW */
+@media (max-width: 340px) {
+  .place-circle {
+    width: 300px;
+    height: 300px;   /* <-- MUST BE SAME TO STAY A CIRCLE */
+  }
+  .place-content {
+    transform: scale(0.63);
+  }
+  
+}
+
+/* EXTRA SMALL 300px → 280px */
+@media (max-width: 300px) {
+  .place-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  
+  .place-content {
+    transform: scale(0.55);
+  }
+}
+/* =====================================================
+   FADE UP ANIMATION
+===================================================== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

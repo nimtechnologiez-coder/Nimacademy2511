@@ -58,8 +58,10 @@
   justify-content: center;
   gap: 85px;
   flex-wrap: wrap;
-  padding: 60px 0 100px;
+  padding: 20px 0 100px;  /* reduced top padding */
+  margin-top: -140px;      /* ↑ lifts section up */
 }
+
 
 /* OUTER DOTTED RING */
 .pc-circle-wrapper {
@@ -249,7 +251,7 @@
 
   .pc-circles-section {
     gap: 35px;
-    padding: 40px 0 60px;
+    padding: 110px 0 60px;
     flex-direction: column; /* 🔥 FIX: circles stack vertically */
   }
 

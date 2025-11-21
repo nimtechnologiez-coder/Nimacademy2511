@@ -8,6 +8,7 @@ import InternshipIndustries from "./compounds/InternshipIndustries";
 import PlacementCollaborations from "./compounds/PlacementCollaborations";
 import Partnerships from "./compounds/Partnerships";
 import Footer from "./compounds/Footer";
+import PlacementCircle from "./compounds/PlacementCircle";
 
 import WhyCreatedProgram from "./Program/WhyCreatedProgram";
 import HeroSection from "./compounds/HeroSection";
@@ -59,6 +60,7 @@ function App() {
               <CoursesSection />
               <CoursesPage />
               <InternshipIndustries />
+              <PlacementCircle/>
               <PlacementCollaborations />
               <Partnerships />
               <Footer />

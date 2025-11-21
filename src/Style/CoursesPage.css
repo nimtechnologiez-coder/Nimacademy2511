@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL WRAPPER — overflow fixed
+   GLOBAL WRAPPER
 ========================================================= */
 .cpg-wrapper {
   background: #fff;
@@ -10,7 +10,7 @@
 }
 
 /* =========================================================
-   SECTION ONE
+   SECTION ONE — TITLE + DESCRIPTION
 ========================================================= */
 .cpg-section-one {
   text-align: center;
@@ -22,9 +22,17 @@
   font-weight: 700;
 }
 
-.cpg-green { color: #61A533; }
-.cpg-blue { color: #005B9E; }
-.cpg-bold { font-weight: 700; }
+.cpg-green {
+  color: #61A533;
+}
+
+.cpg-blue {
+  color: #005B9E;
+}
+
+.cpg-bold {
+  font-weight: 700;
+}
 
 .cpg-section-description {
   font-size: clamp(16px, 2vw, 22px);
@@ -35,32 +43,39 @@
 }
 
 /* =========================================================
-   AUTO SCROLL SLIDER
+   AUTO SCROLL SLIDER (UNIQUE)
 ========================================================= */
-.cpg-slider-container {
+.cpg-uni-slider-container {
   width: 100%;
   overflow: hidden !important;
   padding: 30px 0;
 }
 
-.cpg-slider-track {
+.cpg-uni-slider-track {
   display: flex;
   width: max-content;
   gap: 40px;
-  animation: cpg-scroll 28s linear infinite;
+  animation: cpg-uni-scroll 32s linear infinite;
   will-change: transform;
 }
 
-@keyframes cpg-scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+@keyframes cpg-uni-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 20px));
+  }
 }
 
-.cpg-card-group {
+.cpg-uni-card-group {
   display: flex;
   gap: 40px;
 }
 
+/* =========================================================
+   COURSE CARD
+========================================================= */
 .cpg-course-card {
   width: clamp(160px, 23vw, 240px);
   background: #fff;
@@ -97,8 +112,12 @@
 }
 
 /* =========================================================
-   SECTION TWO
+   SECTION TWO — HANGING CARDS
 ========================================================= */
+.cpg-section-two {
+  width: 100%;
+}
+
 .cpg-section2-heading {
   text-align: center;
   font-size: clamp(28px, 4vw, 42px);
@@ -117,9 +136,7 @@
   background: #000;
 }
 
-/* =========================================================
-   HANGING CARDS
-========================================================= */
+/* Hanging cards */
 .cpg-hanging-cards {
   display: flex;
   justify-content: center;
@@ -130,8 +147,8 @@
 
 .cpg-hang-item {
   text-align: center;
-  width: 100%;
   max-width: 320px;
+  width: 100%;
 }
 
 .cpg-hanger {
@@ -176,7 +193,7 @@
 }
 
 /* =========================================================
-   MOBILE RESET (NO overflow)
+   MOBILE RESPONSIVE (NO HANGER, NO CLIP)
 ========================================================= */
 @media (max-width: 700px) {
   .cpg-hanger,
@@ -236,22 +253,111 @@
    RESPONSIVE FIXES
 ========================================================= */
 @media (max-width: 900px) {
-  .cpg-course-card { width: 200px; }
+  .cpg-course-card {
+    width: 200px;
+  }
 }
 
 @media (max-width: 700px) {
-  .cpg-course-card { width: 160px; }
-  .cpg-slider-track { gap: 20px; }
+  .cpg-course-card {
+    width: 160px;
+  }
+
+  .cpg-uni-slider-track {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 480px) {
-  .cpg-main-heading { font-size: 24px; }
-  .cpg-section-description { font-size: 15px; }
-  .cpg-course-card { width: 140px; }
-  .cpg-hanging-cards { gap: 25px; }
+  .cpg-main-heading {
+    font-size: 24px;
+  }
+
+  .cpg-section-description {
+    font-size: 15px;
+  }
+
+  .cpg-course-card {
+    width: 140px;
+  }
+
+  .cpg-hanging-cards {
+    gap: 25px;
+  }
 }
 
 @media (max-width: 360px) {
-  .cpg-course-card { width: 130px; }
-  .cpg-hang-card { width: 230px; }
+  .cpg-course-card {
+    width: 130px;
+  }
+
+  .cpg-hang-card {
+    width: 230px;
+  }
 }
+/* ============================================
+   ANIMATION KEYFRAMES
+============================================ */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   APPLY ANIMATION TO HEADINGS
+============================================ */
+.place-title {
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+.place-subheading {
+  opacity: 0;
+  animation: fadeDown 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.place-description {
+  opacity: 0;
+  animation: fadeDown 1.2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* ============================================
+   CIRCLE FADE IN
+============================================ */
+.place-circle {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+/* ============================================
+   STAGGERED ROW ANIMATIONS
+============================================ */
+.place-row {
+  opacity: 0;
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+.place-row:nth-child(1) { animation-delay: 0.8s; }
+.place-row:nth-child(2) { animation-delay: 1s; }
+.place-row:nth-child(3) { animation-delay: 1.2s; }
+.place-row:nth-child(4) { animation-delay: 1.4s; }
+.place-row:nth-child(5) { animation-delay: 1.6s; }

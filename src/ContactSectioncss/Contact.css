@@ -242,10 +242,10 @@ html, body {
   width: 100%;
 }
 
-* {
-  max-width: 100%;       /* no item exceeds screen width */
+/* * {
+  max-width: 100%;       
   box-sizing: border-box;
-}
+} */
 
 /* === MAIN WRAPPERS === */
 .contact-wrapper,
