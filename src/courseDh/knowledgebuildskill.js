@@ -24,7 +24,7 @@ const FutureSection = () => {
   }, []);
 
   return (
-    <div className="future-container">
+    <section className="future-container">
       {/* LEFT CONTENT */}
       <div className="future-left">
         <h2>Building Skills For A Better Future</h2>
@@ -42,11 +42,11 @@ const FutureSection = () => {
         ref={imageRef}
         className={`future-right ${isVisible ? "show" : ""}`}
       >
-        
+        <div className="circle-wrapper">
           <img src={futureImg} alt="students" />
-     
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

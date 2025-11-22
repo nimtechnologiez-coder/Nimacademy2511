@@ -1,19 +1,19 @@
 import React, { useEffect } from "react";
-import "../coursecss/Course.css";
+import "../coursestylestk/course.css";
 
 // Images
-import pythonImg from "../Courseimage/python.png";
-import javaImg from "../Courseimage/java.png";
-import mernImg from "../Courseimage/mern.png";
-import dataanalImg from "../Courseimage/data.png";
-import businessImg from "../Courseimage/business.png";
-import digitalImg from "../Courseimage/digital.png";
-import datasciImg from "../Courseimage/datasci.png";
-import awsImg from "../Courseimage/aws.png";
-import productImg from "../Courseimage/productdd.png";
-import aimlImg from "../Courseimage/alml.png";
-import cyberImg from "../Courseimage/cyberf.png";
-import uiuxImg from "../Courseimage/uiux.png";
+import pythonImg from "../imagestk/python.png";
+import javaImg from "../imagestk/java.png";
+import mernImg from "../imagestk/mern.png";
+import dataanalImg from "../imagestk/data.png";
+import businessImg from "../imagestk/business.png";
+import digitalImg from "../imagestk/digital.png";
+import datasciImg from "../imagestk/datasci.png";
+import awsImg from "../imagestk/aws.png";
+import productImg from "../imagestk/productdd.png";
+import aimlImg from "../imagestk/aiml.png";
+import cyberImg from "../imagestk/cyberf.png";
+import uiuxImg from "../imagestk/uiux.png";
 
 const FullStackPage = () => {
 

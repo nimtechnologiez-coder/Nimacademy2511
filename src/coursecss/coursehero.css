@@ -70,6 +70,7 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  text-decoration: none;
 }
 
 .hero-btn {
@@ -114,7 +115,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background: lineargradient(90deg, #2fa2d8, #9bff6a);
+  background: linear-gradient(90deg, #2fa2d8, #9bff6a);
   padding: 18px 45px;
   font-size: 26px;
   font-weight: 800;
@@ -222,7 +223,3 @@
     width: 200px;
   }
 }
-.hero-btn {
-  text-decoration: none;
-}
-

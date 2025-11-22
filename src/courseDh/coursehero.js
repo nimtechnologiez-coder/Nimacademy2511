@@ -1,10 +1,10 @@
 import React from "react";
-import "../coursecss/coursehero.css";
+import "../coursestylestk/coursehero.css";
 
-import heroImg1 from "../Courseimage/herocourse.png";
-import bgHero from "../Courseimage/herobg.png";
+import heroImg1 from "../imagestk/herocourse.png";
+import bgHero from "../imagestk/herobg.png";
 
-const ProgramHeroo = () => {
+const ProgramHero = () => {
   return (
     <section className="program-hero-wrapper">
       <div
@@ -28,13 +28,8 @@ const ProgramHeroo = () => {
             <h3 className="hero-highlight">Master the Future in Just 17 Days</h3>
 
             <div className="hero-buttons">
-  <a href="/Program" className="hero-btn">
-    Show More
-  </a>
-
-                <a href="/Contact" className="hero-btn">
-    Contact Us
-  </a>
+              <button className="hero-btn">Show More</button>
+              <button className="hero-btn">Contact Us</button>
             </div>
           </div>
 
@@ -51,4 +46,4 @@ const ProgramHeroo = () => {
   );
 };
 
-export default ProgramHeroo;
+export default ProgramHero;

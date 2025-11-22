@@ -1,26 +1,25 @@
 /* MAIN LAYOUT */
 .future-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;           /* 👈 image moves up, aligns with text */
   justify-content: space-between;
   padding: 60px 8%;
   font-family: "Poppins", sans-serif;
   gap: 50px;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* LEFT CONTENT */
 .future-left {
-  flex: 1 1 500px;
+  flex: 1 1 520px;
 }
 
 .future-left h2 {
   font-size: 40px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .future-left p {
@@ -29,18 +28,18 @@
   line-height: 1.7;
   color: #333;
   text-align: justify;
-  max-width: 550px;
+  max-width: 580px;
 }
 
 /* RIGHT IMAGE AREA */
 .future-right {
-  flex: 1 1 400px;
+  flex: 0 0 380px;
   display: flex;
   justify-content: center;
 
-  /* SCROLL ANIMATION HIDDEN STATE */
+  /* hidden state for scroll animation */
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(80px);
   transition: all 0.8s ease-out;
 }
 
@@ -50,10 +49,10 @@
   transform: translateX(0);
 }
 
-/* IMAGE CIRCLE DESIGN */
+/* CIRCLE IMAGE DESIGN */
 .circle-wrapper {
-  width: 350px;
-  height: 350px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   padding: 12px;
   background: linear-gradient(135deg, #0080c8, #0060a8);
@@ -71,17 +70,17 @@
 }
 
 .circle-wrapper::before {
-  width: 180px;
-  height: 180px;
-  left: -80px;
-  top: 20px;
+  width: 160px;
+  height: 160px;
+  left: -70px;
+  top: 10px;
 }
 
 .circle-wrapper::after {
-  width: 120px;
-  height: 120px;
-  right: -60px;
-  bottom: 10px;
+  width: 110px;
+  height: 110px;
+  right: -50px;
+  bottom: 0;
 }
 
 .circle-wrapper img {
@@ -89,64 +88,38 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid white;
+  border: 6px solid #fff;
 }
 
-/* ===================================== */
-/*       RESPONSIVE BREAKPOINTS          */
-/* ===================================== */
+/* ========================= */
+/*      RESPONSIVE          */
+/* ========================= */
 
-/* Very Large Screens (1600px+) */
-@media (min-width: 1600px) {
-  .future-left h2 {
-    font-size: 48px;
-  }
-  .future-left p {
-    font-size: 22px;
-  }
-  .circle-wrapper {
-    width: 420px;
-    height: 420px;
-  }
-}
-
-/* Large Laptops (1200px - 1599px) */
-@media (max-width: 1599px) {
-  .future-left h2 {
-    font-size: 38px;
-  }
-  .circle-wrapper {
-    width: 330px;
-    height: 330px;
-  }
-}
-
-/* Normal Laptops (992px - 1199px) */
 @media (max-width: 1199px) {
   .future-container {
     padding: 50px 6%;
     gap: 40px;
   }
+
+  .future-left h2 {
+    font-size: 36px;
+  }
+
   .circle-wrapper {
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
   }
 }
 
-/* Tablets (768px - 991px) */
 @media (max-width: 991px) {
   .future-container {
     flex-direction: column;
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 
   .future-left {
     flex: 1 1 100%;
-  }
-
-  .future-left h2 {
-    font-size: 34px;
   }
 
   .future-left p {
@@ -157,15 +130,15 @@
   .future-right {
     flex: 1 1 100%;
     justify-content: center;
+    transform: translateX(0);   /* no big offset on small screens */
   }
 
   .circle-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 260px;
+    height: 260px;
   }
 }
 
-/* Large Mobiles (576px - 767px) */
 @media (max-width: 767px) {
   .future-container {
     padding: 40px 6%;
@@ -180,19 +153,18 @@
   }
 
   .circle-wrapper {
-    width: 240px;
-    height: 240px;
+    width: 230px;
+    height: 230px;
   }
 }
 
-/* Small Mobiles (575px and below) */
-@media (max-width: 575px) {
+@media (max-width: 480px) {
   .future-container {
     padding: 30px 5%;
   }
 
   .future-left h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .future-left p {
@@ -200,90 +172,7 @@
   }
 
   .circle-wrapper {
-    width: 210px;
-    height: 210px;
+    width: 200px;
+    height: 200px;
   }
 }
-
-/* Extra Small Mobiles (≤ 420px) */
-@media (max-width: 420px) {
-  .future-container {
-    padding: 24px 6%;
-    flex-direction: column;      /* stack text + image */
-    align-items: center;
-    text-align: center;
-  }
-
-  .future-left {
-    width: 100%;
-    order: 2;                    /* text below image (optional) */
-  }
-
-  .future-right {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    order: 1;
-    margin-bottom: 18px;
-    /* keep animation behavior, just no huge offset */
-    transform: translateX(0);
-  }
-
-  .future-left h2 {
-    font-size: 22px;         
-    line-height: 1.3;        
-    text-align: center;      
-    margin-bottom: 12px;
-    margin-right: 0;          /* remove push */
-  }
-
-  .future-left p {
-    font-size: 14px;         
-    line-height: 1.6;
-    text-align: justify;     
-    max-width: 100%;         
-    margin: 0 auto;          /* centered block */
-  }
-
-  .circle-wrapper {
-    width: 180px;
-    height: 180px;
-    padding: 8px;
-  }
-
-  .circle-wrapper::before {
-    width: 110px;
-    height: 110px;
-    left: -30px;
-    top: 0;
-  }
-
-  .circle-wrapper::after {
-    width: 90px;
-    height: 90px;
-    right: -25px;
-    bottom: 0;
-  }
-}
-
-
-/* Ultra Small (≤ 360px) */
-@media (max-width: 360px) {
-  .future-container {
-    padding: 22px 4%;
-  }
-
-  .future-left h2 {
-    font-size: 22px;
-  }
-
-  .future-left p {
-    font-size: 14px;
-  }
-
-  .circle-wrapper {
-    width: 170px;
-    height: 170px;
-  }
-}
-

@@ -1,0 +1,164 @@
+.campus-empower-section {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+
+  /* background: curve image + safe fallback color */
+  background-repeat: no-repeat;
+  background-size: 110% auto;          /* full width, keep aspect ratio */
+  background-position: center 100%;    /* 👈 controls curve height */
+  /* 100% = exactly at bottom; >100 pushes image down (curve moves up) */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", "Arial", sans-serif;
+  overflow: hidden;
+  padding: 0;
+  
+}
+
+.campus-empower-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 480px;
+  z-index: 2;
+ 
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.campus-empower-left {
+  flex: 1 1 500px;
+  min-width: 230px;
+  max-width: 550px;
+  width: 100%;
+  z-index: 2;
+  padding-left: 0;
+  margin-top: 54px;
+}
+
+.campus-empower-title {
+  font-size: 50px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 23px;
+  letter-spacing: 0.1px;
+  line-height: 1.12;
+  text-align: justify;
+}
+
+.campus-empower-desc {
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: #000000;
+  font-weight: 600;
+  text-align: justify;
+  margin-bottom: 90px;
+  max-width: 527px;
+  
+}
+
+.campus-empower-right {
+  flex: 1 0 340px;
+  min-width: 240px;
+  max-width: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 0.5s, transform 0.5s;
+  margin-top: 30px;
+  
+}
+
+.campus-girl-img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  margin-top: 70px;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 1000px) {
+  .campus-empower-section {
+    min-height: 420px;
+    background-position: center 110%; /* slightly higher curve for shorter height */
+  }
+
+  .campus-empower-content {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 393px;
+    padding: 0 24px;
+  }
+
+  .campus-empower-left {
+    margin-top: 35px;
+    max-width: 700px;
+    padding-left: 0;
+  }
+
+  .campus-empower-right {
+    margin-top: 34px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 650px) {
+  .campus-empower-section {
+    min-height: 300px;
+    background-size: cover;          /* fill small screens nicely */
+    background-position: center 120%; /* move curve up a bit more */
+  }
+
+  .campus-empower-content {
+    margin-bottom:10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .campus-empower-left {
+    margin-top: 18px;
+    padding-left: 0;
+    max-width: 100%;
+  }
+
+  .campus-empower-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .campus-empower-desc {
+    font-size: 0.92rem;
+  }
+
+  .campus-empower-right {
+    margin-top: 14px;
+    min-width: 120px;
+    max-width: 100%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+  .campus-empower-section {
+    background-position: center 125%;
+  }
+
+  .campus-empower-title {
+    font-size: 1.1rem;
+  }
+
+  .campus-empower-desc {
+    font-size: 0.85rem;
+  }
+}

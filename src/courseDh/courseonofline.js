@@ -1,7 +1,7 @@
 import React from "react";
-import "../coursecss/courseonofline.css";
-import onlineImg from "../Courseimage/offline.png";
-import offlineImg from "../Courseimage/oflinegr.png";
+import "../coursestylestk/courseonofline.css";
+import onlineImg from "../imagestk/onlinegr.png";
+import offlineImg from "../imagestk/oflinegr.png";
 
 
 
@@ -44,4 +44,3 @@ const LearningModes = () => {
 };
 
 export default LearningModes;
-

@@ -1,0 +1,296 @@
+/* WRAPPER */
+.python-wrapper {
+  padding: 50px 8%;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+/* FIRST ROW LAYOUT */
+.python-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+/* CARD BOX */
+.python-card {
+  width: 490px;
+  height: 590px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-left: 100px ;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+.python-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.python-card-body {
+  padding: 18px;
+  
+}
+
+.python-tag {
+  background: #e8f0ff;
+  color: #0055c9;
+  padding: 5px 12px ;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 345px;
+}
+
+.python-card-body h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+    text-align: justify;
+
+}
+
+.python-card-body p {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+
+}
+
+/* BUTTON */
+.python-btn {
+  padding: 10px 22px;
+  background: linear-gradient(to right, #b5f65d, #50c878);
+  border: none;
+  margin-right: 350px;
+  border-radius: 20px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* RIGHT SECTION TEXT */
+.python-right {
+  flex: 1;
+}
+
+.python-right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.python-right p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.7;
+  text-align: justify;
+  margin-left: 90px;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+/* SECTION TITLE */
+.python-section-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 40px 0 35px;
+  text-align: justify;
+}
+
+/* TWO-CARD GRID */
+.python-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .python-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .python-card {
+    width: 100%;
+  }
+  .python-grid {
+    flex-direction: column;
+  }
+}
+
+
+
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+/* Large screens but below very big widths (1200px) */
+@media (max-width: 1200px) {
+  .python-card {
+    margin-left: 40px;
+  }
+
+  .python-right p {
+    margin-left: 40px;
+  }
+}
+
+/* TABLET LANDSCAPE / SMALL LAPTOP (≤ 1024px) */
+@media (max-width: 1024px) {
+  .python-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .python-card {
+    margin-left: 0;
+    margin-right: 0;
+    margin: 0 auto 30px;
+  }
+
+  .python-right {
+    text-align: center;
+  }
+
+  .python-right p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  /* Remove forced right margins so they center */
+  .python-tag,
+  .python-btn {
+    margin-right: 0;
+  }
+
+  .python-card-body p {
+    text-align: justify;
+  }
+}
+
+/* TABLET PORTRAIT / BIG MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+  .python-wrapper {
+    padding: 40px 6%;
+  }
+
+  .python-section-title {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .python-card {
+    width: 100%;
+  }
+
+  .python-card-body h3 {
+    font-size: 18px;
+  }
+
+  .python-card-body p {
+    font-size: 18px;
+  }
+
+  .python-right h2 {
+    font-size: 24px;
+  }
+
+  .python-right p {
+    font-size: 18px;
+  }
+
+  .python-grid {
+    flex-direction: column;
+  }
+}
+
+/* MEDIUM MOBILE (≤ 600px) */
+@media (max-width: 600px) {
+  .python-wrapper {
+    padding: 35px 5%;
+  }
+
+  .python-row {
+    gap: 30px;
+  }
+
+  .python-section-title {
+    font-size: 26px;
+  }
+
+  .python-card-body {
+    padding: 16px;
+  }
+
+  .python-card-body p {
+    font-size: 16px;
+  }
+
+  .python-right p {
+    font-size: 16px;
+  }
+
+  .python-btn {
+    width: 100%;
+    text-align: center;
+    border-radius: 24px;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  .python-wrapper {
+    padding: 30px 4%;
+  }
+
+  .python-section-title {
+    font-size: 24px;
+  }
+
+  .python-right h2 {
+    font-size: 22px;
+  }
+
+  .python-card-body h3 {
+    font-size: 17px;
+  }
+
+  .python-card-body p {
+    font-size: 15px;
+  }
+
+  .python-tag {
+    font-size: 11px;
+  }
+}
+
+/* EXTRA SMALL (≤ 360px) */
+@media (max-width: 360px) {
+  .python-wrapper {
+    padding: 25px 3%;
+  }
+
+  .python-section-title {
+    font-size: 22px;
+  }
+
+  .python-right h2 {
+    font-size: 20px;
+  }
+
+  .python-card-body p,
+  .python-right p {
+    font-size: 14px;
+  }
+}

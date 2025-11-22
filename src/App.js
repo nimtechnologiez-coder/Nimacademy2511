@@ -46,10 +46,10 @@ import PythonCourses from "./courseDh/knowledgecard"
 import FutureSection from "./courseDh/knowledgebuildskill"
 
 
-import InternshipDomains from "./Internshippage/intern";
+// import InternshipDomains from "./Internshippage/intern";
 import InternshipTopCards from "./Internshippage/interncards";
 import InternshipSection from "./Internshippage/internhero";
-import InternshipDetails from "./Internshippage/internpro";
+// import InternshipDetails from "./Internshippage/internpro";
 import CollaborationSection from "./Internshippage/internship";
 import DomainsSection from "./Internshippage/interntool";
 function App() {
@@ -126,8 +126,9 @@ function App() {
             <ProgramHeroo/>
               <FullStackPage />
              <JourneySectio />
-             <LearningModes/>
              <JourneyCTA/>
+             <LearningModes/>
+             
               <Footer />
             </>
           }
@@ -155,11 +156,11 @@ function App() {
           element={
             <>
             <KnowledgeBanner/>
+            <PythonCourses/>
+            <FutureSection/>
             <Timeline/>
-            <WhyChooseNIM/>
             <CategoryDescriptions/>
-          <PythonCourses/>
-          <FutureSection/>
+            <WhyChooseNIM/>
               <Footer />
             </>
           }
@@ -173,13 +174,8 @@ function App() {
             <>
             <InternshipSection />
                <DomainsSection />
-
-
             <InternshipTopCards /> 
-          
-             
                <CollaborationSection />
-           
               <Footer />
             </>
           }
